@@ -1,0 +1,22 @@
+experiment_name: 'European Call Option | 5 Years | 3 Assets'
+
+product:
+  type: 'EuropeanCall'
+  strike_price: 110.0
+  # We price the option on the first asset
+  asset_index: 0
+
+simulation:
+  n_scenarios: 10000
+  time_horizon_years: 5
+  n_steps: 60 # 12 steps per year (monthly)
+  risk_free_rate: 0.05 # Used for both drift and discounting
+
+gbm_parameters:
+  n_dims: 3
+  initial_prices: [100.0, 105.0, 98.0]
+  volatilities: [0.20, 0.25, 0.18]
+  correlation_matrix:
+    - [1.0, 0.5, 0.3]
+    - [0.5, 1.0, 0.4]
+    - [0.3, 0.4, 1.0]

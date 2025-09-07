@@ -1,0 +1,58 @@
+experiment_name: 'Variable Annuity GMDB | 40 Years | 5 Assets'
+
+product:
+  type: 'VariableAnnuity'
+  initial_investment: 100000.0
+  annual_fee_rate: 0.015
+  policyholder_start_age: 65
+
+simulation:
+  n_scenarios: 5000 
+  time_horizon_years: 40
+  n_steps: 40 
+  risk_free_rate: 0.05
+
+gbm_parameters:
+
+  n_dims: 1
+  initial_prices: [100.0]
+  volatilities: [0.18]
+  correlation_matrix:
+    - [1.0]
+
+lee_carter_parameters:
+  mortality_data_path: 'mortality_data.csv'
+  forecast_years: 40
+
+
+nested_mc_parameters:
+  risk_horizon_years: 1.0
+  n_outer_scenarios: 100 
+  n_inner_scenarios: 500
+
+
+lsmc_parameters:
+
+  basis_type: 'poly_ldr'
+  degree: 2
+
+  n_components: 1
+
+lsmc_parameters:
+  basis_type: 'poly_ldr'
+  degree: 2
+  n_components: 1
+
+
+replicating_martingale_parameters:
+  # basis_type can be 'nn' or 'poly_ldr'
+  basis_type: 'nn'
+
+  nn_params:
+    hidden_units: 32
+    optimizer_max_iter: 100
+
+
+  poly_ldr_params:
+    degree: 2
+    n_components: 1 
