@@ -1,7 +1,7 @@
 # Replicating Martingales Project
 
 ## Overview
-This project implements **Replicating Martingales** for the pricing and risk management of financial derivatives. It focuses on comparing the efficiency and accuracy of Replicating Martingales against standard **Nested Monte Carlo (Nested MC)** and **Least Squares Monte Carlo (LSMC)** methods.
+Based on A machine learning approach to portfolio pricing and risk management for high-dimensional problems by Lucio Fernandez Arjona and Damir Filipovi. This project aims implements **Replicating Martingales** for the pricing and risk management of financial derivatives. It focuses on comparing the efficiency and accuracy of Replicating Martingales against standard **Nested Monte Carlo (Nested MC)** and **Least Squares Monte Carlo (LSMC)** methods.
 
 The project supports pricing and risk analysis for:
 - **European Call Options**
@@ -85,4 +85,5 @@ Experiments are defined using YAML files in the `config/` directory. You can mod
 - `seaborn`
 - `pymanopt`
 - `pyyaml`
+
 
