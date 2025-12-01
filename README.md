@@ -34,7 +34,7 @@ The project supports pricing and risk analysis for:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/GowtamPolamarasetti/Replicating_Martingale_F.git
    cd replicating-martingales-project
    ```
 
@@ -85,3 +85,4 @@ Experiments are defined using YAML files in the `config/` directory. You can mod
 - `seaborn`
 - `pymanopt`
 - `pyyaml`
+
